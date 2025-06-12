@@ -1,13 +1,21 @@
 
 public class Main {
     public static void main(String[] args) {
-        Studente student = new Studente("Mario ", "Rossi", 20);
-        System.out.println(student.about());
+        RegistroStudenti registro = new RegistroStudenti();
 
-        ContoBancario conto = new ContoBancario(0, 0);
+        registro.aggiungiStudente("Mario", "Rossi", 20);
+        registro.aggiungiStudente("Luca", "Bianchi", 19023);
+        registro.aggiungiStudente("Giorgio", "Verdi", 243);
+        registro.aggiungiStudente("Giuseppe", "Falco", 60);
 
-        System.out.println(conto.deposito(1000));
-        System.out.println(conto.prelevo(234));
+        registro.stampaRegistro();
+
+        /*
+         * ContoBancario conto = new ContoBancario(0, 0);
+         * 
+         * System.out.println(conto.deposito(1000));
+         * System.out.println(conto.prelevo(234));
+         */
     }
 
 }
