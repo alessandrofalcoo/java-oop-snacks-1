@@ -7,14 +7,14 @@ public class RegistroStudenti {
 
     public void aggiungiStudente(String nome, String cognome, int age) {
         int count = studenti.length;
-        Studente[] pippo = new Studente[count + 1];
+        Studente[] newStudenti = new Studente[count + 1];
 
         for (int i = 0; i < count; i++) {
-            pippo[i] = studenti[i];
+            newStudenti[i] = studenti[i];
         }
-        pippo[count] = new Studente(nome, cognome, age);
+        newStudenti[count] = new Studente(nome, cognome, age);
 
-        studenti = pippo;
+        studenti = newStudenti;
     }
 
     public void stampaRegistro() {
